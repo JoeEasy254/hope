@@ -58,7 +58,7 @@ function App() {
       setCounter(Math.floor(Math.random() * words.length));
       setCurrentColor(colors[Math.floor(Math.random() * colors.length)]);
     }, 4000);
-    console.log(counter);
+  
     return () => clearTimeout(interval);
   }, [counter]);
 
