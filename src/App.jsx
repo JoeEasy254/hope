@@ -52,10 +52,13 @@ function App() {
 
   useEffect(() => {
     const interval = setTimeout(() => {
+      if (counter == words.length - 1) {
+        setCounter(counter - 1);
+      }
       setCounter(Math.floor(Math.random() * words.length));
       setCurrentColor(colors[Math.floor(Math.random() * colors.length)]);
     }, 4000);
-
+    console.log(counter);
     return () => clearTimeout(interval);
   }, [counter]);
 
